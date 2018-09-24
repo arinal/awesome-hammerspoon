@@ -36,17 +36,17 @@ hs.loadSpoon("ModalMgr")
 -- Define default Spoons which will be loaded later
 if not hspoon_list then
     hspoon_list = {
-        "AClock",
-        "BingDaily",
+        -- "AClock",
+        -- "BingDaily",
         "CircleClock",
-        "ClipShow",
-        "CountDown",
+        -- "ClipShow",
+        -- "CountDown",
         "HCalendar",
-        "HSaria2",
-        "HSearch",
-        "SpeedMenu",
+        -- "HSaria2",
+        -- "HSearch",
+        -- "SpeedMenu",
         "WinWin",
-        "FnMate",
+        -- "FnMate",
     }
 end
 
@@ -77,10 +77,13 @@ cmodal:bind('', 'tab', 'Toggle Cheatsheet', function() spoon.ModalMgr:toggleChea
 if not hsapp_list then
     hsapp_list = {
         {key = 'f', name = 'Finder'},
-        {key = 's', name = 'Safari'},
-        {key = 't', name = 'Terminal'},
+        {key = 'c', name = 'Google Chrome'},
+        {key = 't', name = 'iTerm'},
         {key = 'v', id = 'com.apple.ActivityMonitor'},
         {key = 'y', id = 'com.apple.systempreferences'},
+        {key = 's', name = 'Slack'},
+        {key = 'w', name = 'WhatsApp'},
+        {key = 'e', name = 'Mail'},
     }
 end
 for _, v in ipairs(hsapp_list) do
@@ -205,14 +208,14 @@ end
 
 ----------------------------------------------------------------------------------------------------
 -- Register Hammerspoon API manual: Open Hammerspoon manual in default browser
-hsman_keys = hsman_keys or {"alt", "H"}
-if string.len(hsman_keys[2]) > 0 then
-    spoon.ModalMgr.supervisor:bind(hsman_keys[1], hsman_keys[2], "Read Hammerspoon Manual", function()
-        hs.doc.hsdocs.forceExternalBrowser(true)
-        hs.doc.hsdocs.moduleEntitiesInSidebar(true)
-        hs.doc.hsdocs.help()
-    end)
-end
+-- hsman_keys = hsman_keys or {"alt", "H"}
+-- if string.len(hsman_keys[2]) > 0 then
+--     spoon.ModalMgr.supervisor:bind(hsman_keys[1], hsman_keys[2], "Read Hammerspoon Manual", function()
+--         hs.doc.hsdocs.forceExternalBrowser(true)
+--         hs.doc.hsdocs.moduleEntitiesInSidebar(true)
+--         hs.doc.hsdocs.help()
+--     end)
+-- end
 
 ----------------------------------------------------------------------------------------------------
 -- countdownM modal environment
@@ -254,13 +257,12 @@ end
 
 ----------------------------------------------------------------------------------------------------
 -- Register lock screen
-hslock_keys = hslock_keys or {"alt", "L"}
-if string.len(hslock_keys[2]) > 0 then
-    spoon.ModalMgr.supervisor:bind(hslock_keys[1], hslock_keys[2], "Lock Screen", function()
-        hs.caffeinate.lockScreen()
-    end)
-end
-
+-- hslock_keys = hslock_keys or {"alt", "L"}
+-- if string.len(hslock_keys[2]) > 0 then
+--     spoon.ModalMgr.supervisor:bind(hslock_keys[1], hslock_keys[2], "Lock Screen", function()
+--         hs.caffeinate.lockScreen()
+--     end)
+-- end
 ----------------------------------------------------------------------------------------------------
 -- resizeM modal environment
 if spoon.WinWin then
