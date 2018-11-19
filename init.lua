@@ -78,12 +78,13 @@ if not hsapp_list then
     hsapp_list = {
         {key = 'f', name = 'Finder'},
         {key = 'c', name = 'Google Chrome'},
-        {key = 't', name = 'iTerm'},
+        {key = 't', name = 'alacritty'},
         {key = 'v', id = 'com.apple.ActivityMonitor'},
         {key = 'y', id = 'com.apple.systempreferences'},
         {key = 's', name = 'Slack'},
         {key = 'w', name = 'WhatsApp'},
         {key = 'e', name = 'Mail'},
+        {key = 'i', name = 'IntelliJ IDEA CE'},
     }
 end
 for _, v in ipairs(hsapp_list) do
